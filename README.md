@@ -1,2 +1,2 @@
-# Onebitsports
- Projeto final do módulo de CSS Moderno da Onebitcode
+# OneBitSports
+ Projeto final do módulo de CSS Moderno da OneBitCode

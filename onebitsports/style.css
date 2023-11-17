@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #eee;
   font-family: 'Montserrat', sans-serif;
@@ -17,10 +21,12 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px 50px;
+  flex-wrap: wrap;
+  gap: 8px 15px;
 }
 
 .header-logo {
-  width: 250px;
+  width: 180px;
 }
 
 .nav {
@@ -41,6 +47,7 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1.2em;
+  padding: 3px;
   font-weight: 500;
 }
 
@@ -49,10 +56,15 @@ body {
   border-bottom: 1px solid #dadada;
 }
 
+/* Conteúdo Principal */
 main {
+  width: 80%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "mainCards" "asideCards";
+  padding: 20px;
+  margin: 20px auto;
+  flex: 1 0 auto;
 }
 
 /* TITLE */
@@ -76,19 +88,23 @@ main {
 }
 
 /* SECTION */
-
 .main-cards {
-  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .line {
   display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  grid-area: mainCards;
 }
 
 .cards {
   display: flex;
   justify-content: center;
-  margin: 10px;
+  cursor: pointer;
 }
 
 .content {
@@ -116,28 +132,30 @@ main {
 /* ASIDE */
 aside {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 50px;
+  align-items: center;
 }
 
 .categories {
   background-color: white;
   border-radius: 10px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, .1);
-  width: 300px;
+  min-width: 300px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 40px;
+  grid-area: asideCards;
+  padding: 30px 0;
 }
 
 .categories-title {
   background-color: #000000e6;
   color: white;
   font-size: 20px;
-  padding: 7px 20px;
-  border-radius: 7px;
+  padding: 7px 55px;
+  border-radius: 5px;
 }
 
 .aside-cards {
@@ -180,7 +198,7 @@ aside {
 }
 
 .footer-img {
-  width: 250px;
+  width: 180px;
 }
 
 .footer-anchor {

@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 html {
@@ -58,13 +59,13 @@ body {
 
 /* Conteúdo Principal */
 main {
-  width: 80%;
+  max-width: 80%;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-areas: "mainCards" "asideCards";
+  grid-template-columns: 1fr 1fr;
   padding: 20px;
   margin: 20px auto;
-  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 /* TITLE */
@@ -88,16 +89,18 @@ main {
 }
 
 /* SECTION */
-.main-cards {
+.main-cards { 
+  width: 800px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 .line {
   display: flex;
-  flex-wrap: wrap;
-  gap: 50px;
+  justify-content: center;
+  gap: 20px;
   grid-area: mainCards;
 }
 
@@ -131,8 +134,8 @@ main {
 
 /* ASIDE */
 aside {
-  display: flex;
-  align-items: center;
+  width: 300px;
+  margin-left: 50px;
 }
 
 .categories {
@@ -143,7 +146,7 @@ aside {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 40px;
   grid-area: asideCards;
